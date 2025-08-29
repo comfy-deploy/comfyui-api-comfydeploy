@@ -197,5 +197,141 @@
     "version": 0.4,
     "revision": 0,
     "last_link_id": 15,
-    "last_node_id": 17
+    "last_node_id": 17,
+    "workflow_api": {
+        "14": {
+            "_meta": {
+                "title": "Video Combine 🎥🅥🅗🅢"
+            },
+            "inputs": {
+                "crf": 22,
+                "format": "video/h265-mp4",
+                "images": [
+                    "16",
+                    0
+                ],
+                "pix_fmt": "yuv420p10le",
+                "pingpong": false,
+                "frame_rate": 8,
+                "loop_count": 0,
+                "save_output": true,
+                "save_metadata": true,
+                "filename_prefix": [
+                    "17",
+                    0
+                ]
+            },
+            "class_type": "VHS_VideoCombine"
+        },
+        "16": {
+            "_meta": {
+                "title": "External Image (ComfyUI Deploy)"
+            },
+            "inputs": {
+                "input_id": "input_image",
+                "description": "",
+                "display_name": "",
+                "default_value_url": "https://comfy-deploy-output.s3.us-east-2.amazonaws.com/assets/img_TnmbjHniCjjETWkh.png"
+            },
+            "class_type": "ComfyUIDeployExternalImage"
+        },
+        "17": {
+            "_meta": {
+                "title": "External Text (ComfyUI Deploy)"
+            },
+            "inputs": {
+                "input_id": "filename_prefix",
+                "description": "",
+                "display_name": "",
+                "default_value": "MyVideo"
+            },
+            "class_type": "ComfyUIDeployExternalText"
+        }
+    },
+    "environment": {
+        "comfyui_version": "866f6cdab4bd5de95ee6296d1b418c455f67f929",
+        "gpu": "CPU",
+        "docker_command_steps": {
+            "steps": [
+                {
+                    "id": "c37de66f-8",
+                    "data": {
+                        "url": "https://github.com/BennyKok/comfyui-deploy",
+                        "hash": "7d65d23f84d7ec3e9772d00f62146cbe36e3d267",
+                        "meta": {
+                            "message": "fix: add null check in findIndex to prevent TypeError in context menu\n\n- Fixed TypeError when accessing 'content' property of null/undefined array elements\n- Removed empty options.push() that was adding undefined to the array\n- Bump version to 2.3.3",
+                            "committer": {
+                                "date": "2025-08-27T01:34:20.000Z",
+                                "name": "bennykok",
+                                "email": "itechbenny@gmail.com"
+                            },
+                            "commit_url": "https://github.com/BennyKok/comfyui-deploy/commit/7d65d23f84d7ec3e9772d00f62146cbe36e3d267",
+                            "latest_hash": "7d65d23f84d7ec3e9772d00f62146cbe36e3d267",
+                            "stargazers_count": 1401
+                        },
+                        "name": "ComfyUI Deploy",
+                        "files": [],
+                        "install_type": "git-clone"
+                    },
+                    "type": "custom-node"
+                },
+                {
+                    "id": "3cd8e14a-4",
+                    "data": {
+                        "url": "https://github.com/rgthree/rgthree-comfy",
+                        "hash": "84a146fee39f7b3a8c6631dcac29bc13b077eb49",
+                        "meta": {
+                            "message": "Inc version",
+                            "committer": {
+                                "date": "2025-06-08T16:10:06.000Z",
+                                "name": "rgthree",
+                                "email": "regis.gaughan@gmail.com"
+                            },
+                            "latest_hash": "84a146fee39f7b3a8c6631dcac29bc13b077eb49"
+                        },
+                        "name": "rgthree-comfy",
+                        "files": [
+                            "https://github.com/rgthree/rgthree-comfy"
+                        ],
+                        "install_type": "git-clone"
+                    },
+                    "type": "custom-node"
+                },
+                {
+                    "id": "67c3c53f-1",
+                    "data": {
+                        "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
+                        "hash": "8e4d79471bf1952154768e8435a9300077b534fa",
+                        "meta": {
+                            "message": "Disable serialization of animated preview widgets",
+                            "committer": {
+                                "date": "2025-08-07T14:53:50.000Z",
+                                "name": "AustinMroz",
+                                "email": "austinmroz@utexas.edu"
+                            },
+                            "latest_hash": "8e4d79471bf1952154768e8435a9300077b534fa"
+                        },
+                        "name": "ComfyUI-VideoHelperSuite",
+                        "files": [
+                            "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+                        ],
+                        "install_type": "git-clone"
+                    },
+                    "type": "custom-node"
+                }
+            ]
+        },
+        "max_containers": 1,
+        "install_custom_node_with_gpu": false,
+        "run_timeout": 300,
+        "scaledown_window": 60,
+        "extra_docker_commands": [],
+        "base_docker_image": null,
+        "python_version": null,
+        "extra_args": null,
+        "prestart_command": null,
+        "min_containers": 0,
+        "machine_hash": "8e4f4857b9be80b6d95fbac6726538aa18f064db83fd29ee7d766ff462b0cc55",
+        "disable_metadata": true
+    }
 }
