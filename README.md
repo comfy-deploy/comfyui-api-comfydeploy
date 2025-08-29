@@ -15,7 +15,7 @@ bun install
 ## Local: 
 Start up ComfyUI locally.
 
-Make sure you have ComfyDeploy custom node installed.
+Make sure you have [ComfyDeploy](https://github.com/BennyKok/comfyui-deploy) custom node installed.
 
 What the scripts does:
 ```
