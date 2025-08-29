@@ -144,12 +144,15 @@ if (deploymentId) {
 const filename_prefix = crypto.randomUUID()
 // Queue the workflow thru raw ComfyDeploy API
 
-console.log("Queueing workflow...")
+const inputs = {
+    input_image: "https://comfy-deploy-output.s3.us-east-2.amazonaws.com/assets/img_TnmbjHniCjjETWkh.png",
+    filename_prefix: filename_prefix,
+}
+
+console.log("Queueing workflow... with inputs: ")
+console.log(inputs)
 await queueComfyDeploy({
-    inputs: {
-        input_image: "https://comfy-deploy-output.s3.us-east-2.amazonaws.com/assets/img_TnmbjHniCjjETWkh.png",
-        filename_prefix: filename_prefix,
-    },
+    inputs: inputs,
     workflow: workflowVersion?.workflow ?? workflow,
     workflow_api_raw: workflowVersion?.workflow_api ?? workflow_api,
 })
