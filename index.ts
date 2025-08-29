@@ -34,7 +34,7 @@ async function downloadFileFromComfyUI({ filename, pollInterval = 1, maxWaitSeco
     }
 }
 
-async function queueComfyDeploy(payload: {
+async function queueComfyAPI(payload: {
     inputs: any,
     workflow: any,
     workflow_api_raw: any,
@@ -151,7 +151,7 @@ const inputs = {
 
 console.log("Queueing workflow... with inputs: ")
 console.log(inputs)
-await queueComfyDeploy({
+await queueComfyAPI({
     inputs: inputs,
     workflow: workflowVersion?.workflow ?? workflow,
     workflow_api_raw: workflowVersion?.workflow_api ?? workflow_api,
