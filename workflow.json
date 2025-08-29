@@ -1,0 +1,201 @@
+{
+    "id": "7950cd1b-3fec-44d5-8737-24833cc46dcb",
+    "extra": {
+        "ds": {
+            "scale": 0.9550826653418435,
+            "offset": [
+                -326.8105835130623,
+                -64.2796752538767
+            ]
+        },
+        "frontendVersion": "1.21.7",
+        "VHS_MetadataImage": true,
+        "VHS_latentpreview": false,
+        "VHS_KeepIntermediate": true,
+        "VHS_latentpreviewrate": 0
+    },
+    "links": [
+        [
+            14,
+            16,
+            0,
+            14,
+            0,
+            "IMAGE"
+        ],
+        [
+            15,
+            17,
+            0,
+            14,
+            4,
+            "STRING"
+        ]
+    ],
+    "nodes": [
+        {
+            "id": 16,
+            "pos": [
+                784.96484375,
+                208.23828125
+            ],
+            "mode": 0,
+            "size": [
+                309.1890563964844,
+                366
+            ],
+            "type": "ComfyUIDeployExternalImage",
+            "flags": {},
+            "order": 0,
+            "inputs": [
+                {
+                    "link": null,
+                    "name": "default_value",
+                    "type": "IMAGE",
+                    "shape": 7
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": [
+                        14
+                    ]
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "ComfyUIDeployExternalImage"
+            },
+            "widgets_values": [
+                "input_image",
+                "",
+                "",
+                "https://comfy-deploy-output.s3.us-east-2.amazonaws.com/assets/img_TnmbjHniCjjETWkh.png",
+                ""
+            ]
+        },
+        {
+            "id": 17,
+            "pos": [
+                782.2068481445312,
+                655.5601196289062
+            ],
+            "mode": 0,
+            "size": [
+                400,
+                200
+            ],
+            "type": "ComfyUIDeployExternalText",
+            "flags": {},
+            "order": 1,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        15
+                    ]
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "ComfyUIDeployExternalText"
+            },
+            "widgets_values": [
+                "filename_prefix",
+                "MyVideo",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 14,
+            "pos": [
+                1253.5831298828125,
+                284.8665771484375
+            ],
+            "mode": 0,
+            "size": [
+                310.4775390625,
+                310
+            ],
+            "type": "VHS_VideoCombine",
+            "flags": {},
+            "order": 2,
+            "inputs": [
+                {
+                    "link": 14,
+                    "name": "images",
+                    "type": "IMAGE"
+                },
+                {
+                    "link": null,
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "shape": 7
+                },
+                {
+                    "link": null,
+                    "name": "meta_batch",
+                    "type": "VHS_BatchManager",
+                    "shape": 7
+                },
+                {
+                    "link": null,
+                    "name": "vae",
+                    "type": "VAE",
+                    "shape": 7
+                },
+                {
+                    "link": 15,
+                    "name": "filename_prefix",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "filename_prefix"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Filenames",
+                    "type": "VHS_FILENAMES",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VHS_VideoCombine"
+            },
+            "widgets_values": {
+                "crf": 22,
+                "format": "video/h265-mp4",
+                "pix_fmt": "yuv420p10le",
+                "pingpong": false,
+                "frame_rate": 8,
+                "loop_count": 0,
+                "save_output": true,
+                "videopreview": {
+                    "hidden": false,
+                    "params": {
+                        "type": "output",
+                        "format": "video/h265-mp4",
+                        "filename": "MyVideo_00001.mp4",
+                        "fullpath": "/Users/bennykok/Documents/GitHub/ComfyUI/output/MyVideo_00001.mp4",
+                        "workflow": "MyVideo_00001.png",
+                        "subfolder": "",
+                        "frame_rate": 8
+                    },
+                    "paused": false
+                },
+                "save_metadata": true,
+                "filename_prefix": "AnimateDiff"
+            }
+        }
+    ],
+    "config": {},
+    "groups": [],
+    "version": 0.4,
+    "revision": 0,
+    "last_link_id": 15,
+    "last_node_id": 17
+}

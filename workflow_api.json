@@ -1,0 +1,50 @@
+{
+    "14": {
+        "_meta": {
+            "title": "Video Combine 🎥🅥🅗🅢"
+        },
+        "inputs": {
+            "crf": 22,
+            "format": "video/h265-mp4",
+            "images": [
+                "16",
+                0
+            ],
+            "pix_fmt": "yuv420p10le",
+            "pingpong": false,
+            "frame_rate": 8,
+            "loop_count": 0,
+            "save_output": true,
+            "save_metadata": true,
+            "filename_prefix": [
+                "17",
+                0
+            ]
+        },
+        "class_type": "VHS_VideoCombine"
+    },
+    "16": {
+        "_meta": {
+            "title": "External Image (ComfyUI Deploy)"
+        },
+        "inputs": {
+            "input_id": "input_image",
+            "description": "",
+            "display_name": "",
+            "default_value_url": "https://comfy-deploy-output.s3.us-east-2.amazonaws.com/assets/img_TnmbjHniCjjETWkh.png"
+        },
+        "class_type": "ComfyUIDeployExternalImage"
+    },
+    "17": {
+        "_meta": {
+            "title": "External Text (ComfyUI Deploy)"
+        },
+        "inputs": {
+            "input_id": "filename_prefix",
+            "description": "",
+            "display_name": "",
+            "default_value": "MyVideo"
+        },
+        "class_type": "ComfyUIDeployExternalText"
+    }
+}
