@@ -1,5 +1,9 @@
 # ComfyUI API with ComfyDeploy
 
+Works full locally
+
+<img width="1800" height="428" alt="CleanShot 2025-08-29 at 12 39 00@2x" src="https://github.com/user-attachments/assets/c7f58b2e-c821-4ab1-ae61-d988889db65b" />
+
 To install dependencies:
 
 ```bash
